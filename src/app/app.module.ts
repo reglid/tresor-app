@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RouterModule} from "@angular/router";
+import { TresorDialogComponent } from './tresor-dialog/tresor-dialog.component';
+import { TresorQuestDisplayComponent } from './tresor-quest-display/tresor-quest-display.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TresorDialogComponent,
+    TresorQuestDisplayComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
