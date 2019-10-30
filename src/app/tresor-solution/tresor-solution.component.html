@@ -1,8 +1,12 @@
-<app-tresor-solution-input (solutionEntered)="checkSolution($event)"></app-tresor-solution-input>
+<label>
+  <input #solution (keyup.enter)="processInput(solution.value)">
+</label>
+<button (click)="processInput(solution.value)">Lösung prüfen</button>
+
 
 <div *ngIf="solutionCorrect">
   Deine Lösung ist richtig!!
-  <button (click)="nextQuest()" >Zur nächsten Aufgabe</button>
+  <button (click)="nextQuest(); solution.value = ''" >Zur nächsten Aufgabe</button>
 </div>
 
 <div *ngIf="solutionCorrect === false">

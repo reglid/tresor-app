@@ -19,9 +19,16 @@ export class TresorSolutionComponent implements OnInit {
   ngOnInit() {
   }
 
-  checkSolution($solution: string) {
-    console.log("Check solution: " + $solution);
-    this.solutionCorrect = this.expectedSolution.toLowerCase() === $solution.toLowerCase();
+  processInput(solution: string) {
+    const trimmedSolution = solution.replace(/ /g, "");
+    console.log("Solution: " + trimmedSolution);
+    this.checkSolution(trimmedSolution);
+
+  }
+
+  checkSolution(solution: string) {
+    console.log("Check solution: " + solution);
+    this.solutionCorrect = this.expectedSolution.toLowerCase() === solution.toLowerCase();
   }
 
   nextQuest() {
