@@ -1,4 +1,4 @@
-<p class="mat-small">Current Stage {{currentStage.id}}</p>
+<p>Aufgabe {{currentStage.id}}:</p>
 
 <app-tresor-quest-display [quest]="currentStage.quest"></app-tresor-quest-display>
 <app-tresor-solution (solutionCorrectEntered)="nextQuest()" [expectedSolution]="currentStage.solution"></app-tresor-solution>

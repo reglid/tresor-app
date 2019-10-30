@@ -5,10 +5,16 @@
 
 
 <div *ngIf="solutionCorrect">
-  Deine Lösung ist richtig!!
+  <p>
+    Deine Lösung ist richtig!!
+  </p>
+
   <button (click)="nextQuest(); solution.value = ''" >Zur nächsten Aufgabe</button>
 </div>
 
 <div *ngIf="solutionCorrect === false">
-  Deine Lösung ist falsch!! Versuche es nochmals!
+  <p>
+    Deine Lösung ist falsch!! Versuche es nochmals!
+  </p>
+
 </div>
