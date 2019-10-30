@@ -8,8 +8,10 @@ import {Stage} from "../Stage";
 })
 export class TresorDialogComponent implements OnInit {
   currentStage: Stage;
+  currentStageIdx: number = 0;
 
   stages: Stage[];
+
 
   constructor() { }
 
@@ -28,9 +30,13 @@ export class TresorDialogComponent implements OnInit {
         quest: "Was ergibt 1000 + 200 + 30 + 4?",
         solution: "5678"
       }
-    ]
+    ];
 
-    this.currentStage = this.stages[0]
+    this.currentStage = this.stages[this.currentStageIdx];
   }
 
+  nextQuest() {
+    this.currentStageIdx++;
+    this.currentStage = this.stages[this.currentStageIdx];
+  }
 }

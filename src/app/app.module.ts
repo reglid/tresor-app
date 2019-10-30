@@ -6,12 +6,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RouterModule} from "@angular/router";
 import { TresorDialogComponent } from './tresor-dialog/tresor-dialog.component';
 import { TresorQuestDisplayComponent } from './tresor-quest-display/tresor-quest-display.component';
+import { TresorSolutionInputComponent } from './tresor-solution-input/tresor-solution-input.component';
+import { TresorSolutionComponent } from './tresor-solution/tresor-solution.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TresorDialogComponent,
-    TresorQuestDisplayComponent
+    TresorQuestDisplayComponent,
+    TresorSolutionInputComponent,
+    TresorSolutionComponent
   ],
   imports: [
     BrowserModule,

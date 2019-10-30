@@ -1,0 +1,10 @@
+<app-tresor-solution-input (solutionEntered)="checkSolution($event)"></app-tresor-solution-input>
+
+<div *ngIf="solutionCorrect">
+  Deine Lösung ist richtig!!
+  <button (click)="nextQuest()" >Zur nächsten Aufgabe</button>
+</div>
+
+<div *ngIf="solutionCorrect === false">
+  Deine Lösung ist falsch!! Versuche es nochmals!
+</div>
