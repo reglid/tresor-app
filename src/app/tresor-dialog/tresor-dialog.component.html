@@ -1,4 +1,11 @@
-<p>Aufgabe {{currentStage.id}}:</p>
 
-<app-tresor-quest-display [quest]="currentStage.quest"></app-tresor-quest-display>
-<app-tresor-solution (solutionCorrectEntered)="nextQuest()" [expectedSolution]="currentStage.solution"></app-tresor-solution>
+<div *ngIf="!allQuestsCompleted">
+  <p (click)="shortcut($event)">Aufgabe {{currentStage.id}}:</p>
+
+  <app-tresor-quest-display [quest]="currentStage.quest"></app-tresor-quest-display>
+  <app-tresor-solution (solutionCorrectEntered)="nextQuest()" [expectedSolution]="currentStage.solution"></app-tresor-solution>
+</div>
+
+<div *ngIf="allQuestsCompleted">
+  <p>{{finalMessage}}</p>
+</div>
