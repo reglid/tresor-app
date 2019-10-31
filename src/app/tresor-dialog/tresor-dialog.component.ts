@@ -11,7 +11,8 @@ export class TresorDialogComponent implements OnInit {
   currentStageIdx: number = 0;
 
   stages: Stage[];
-
+  finalMessage: string;
+  allQuestsCompleted: boolean = false;
 
   constructor() { }
 
@@ -32,11 +33,23 @@ export class TresorDialogComponent implements OnInit {
       }
     ];
 
+    this.finalMessage = "Geschafft! Ihr könnt das Schloss mit der Kombination '971' öffnen. Viel Spass!";
+
     this.currentStage = this.stages[this.currentStageIdx];
   }
 
   nextQuest() {
     this.currentStageIdx++;
-    this.currentStage = this.stages[this.currentStageIdx];
+    if (this.currentStageIdx < this.stages.length) {
+      this.currentStage = this.stages[this.currentStageIdx];
+    } else {
+      this.allQuestsCompleted = true;
+    }
+  }
+
+  shortcut($event: MouseEvent) {
+    if ($event.ctrlKey || $event.metaKey){
+      this.nextQuest();
+    }
   }
 }
