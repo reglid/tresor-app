@@ -1,11 +1,12 @@
 <label>
   <input #solution (keyup.enter)="processInput(solution.value)">
 </label>
+
 <button (click)="processInput(solution.value)">Lösung prüfen</button>
 
 
 <div *ngIf="solutionCorrect">
-  <p>
+  <p class="solution">
     Deine Lösung ist richtig!!
   </p>
 
@@ -13,8 +14,7 @@
 </div>
 
 <div *ngIf="solutionCorrect === false">
-  <p>
+  <p class="solution">
     Deine Lösung ist falsch!! Versuche es nochmals!
   </p>
-
 </div>

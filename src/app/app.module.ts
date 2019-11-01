@@ -7,6 +7,7 @@ import {RouterModule} from "@angular/router";
 import { TresorDialogComponent } from './tresor-dialog/tresor-dialog.component';
 import { TresorQuestDisplayComponent } from './tresor-quest-display/tresor-quest-display.component';
 import { TresorSolutionComponent } from './tresor-solution/tresor-solution.component';
+import {AngularMaterialModule} from "./angular-material.module";
 
 @NgModule({
   declarations: [
@@ -14,11 +15,14 @@ import { TresorSolutionComponent } from './tresor-solution/tresor-solution.compo
     TresorDialogComponent,
     TresorQuestDisplayComponent,
     TresorSolutionComponent
+
   ],
   imports: [
+    AngularMaterialModule,
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

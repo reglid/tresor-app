@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; width: 100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button {
+  font-size: large;
+  margin: 10px;
+}
+input {
+  font-size: large;
+  margin: 10px;
+}
+
+.container {
+  margin: 30px;
+  max-width: 300px;
+}
+
+.quest {
+  font-style: oblique;
+  background-color: lightgray;
+  font-size: larger;
+  text-align: center;
+}
+
+.solution {
+  font-style: oblique;
+  background-color: lightgray;
+  font-size: large;
+  text-align: center;
+}
+
+.final-message {
+  font-style: oblique;
+  background-color: lightgray;
+  font-size: x-large;
+  text-align: center;
+}
